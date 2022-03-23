@@ -25,6 +25,90 @@
 - Media Queries
 */
 
+.userLog{
+  color: #bbb;
+  background-color: #15273f;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: 350px;
+  margin: auto;
+  position: relative;
+  margin-top: 5%;
+
+}
+
+.taskForm{
+  color: #bbb;
+  background-color: #15273f;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: 350px;
+  margin: auto;
+  position: relative;
+  margin-top: 2em;
+
+}
+
+.confirmDelete{
+  color: #bbb;
+  background-color: #15273f;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: 350px;
+  margin: auto;
+  position: relative;
+  margin-top: 2em;
+}
+
+.toDoList{
+  color: #bbb;
+  background-color: #15273f;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: 350px;
+  margin: auto;
+  position: relative;
+
+}
+.userLogin{
+  color: #bbb;
+  background-color: #15273f;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: 350px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2em;
+  z-index: 1;
+}
+.userRegister{
+  color: #bbb;
+  background-color: #15273f;
+  border-radius: 4px;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 10px 4px;
+  padding: 1em;
+  width: -moz-fit-content;
+  width: 350px;
+  margin: auto;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 2em;
+  z-index: 1;
+
+}
 
 /* Grid
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -121,11 +205,16 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 1.5em; /* currently ems cause chrome bug misinterpreting rems on body element */
-  line-height: 1.6;
+  font-size: 1.4em;
+  line-height: 1.4;
   font-weight: 400;
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #222; }
+  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial,
+    sans-serif;
+  background-color: #0a1625;
+  width: 100%;
+  margin: 0 auto;
+  box-shadow: rgba(0, 0, 0, 0.342) 0 0 3px 3px;
+  min-height: 100vh; }
 
 
 /* Typography

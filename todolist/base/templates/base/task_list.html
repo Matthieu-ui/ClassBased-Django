@@ -1,36 +1,44 @@
 {% extends 'base/main.html' %}
 {% block content %}
 {% if request.user.is_authenticated %}
-<p>{{request.user}}</p>
-<a href="{% url 'logout' %}" >Logout</a>
-{% else %}
-<a href="{% url 'login' %}" >Login</a>
-{% endif %}
+<div class="userLog">
+    <p>{{request.user}}</p>
+    <a href="{% url 'logout' %}" >Logout</a>
+    {% else %}
+    <a href="{% url 'login' %}" >Login</a>
+    {% endif %}
+    
+</div>
 
 <hr>
-<h1>to do list {{count}}</h1>
-<a href="{% url 'task-create' %}">add task</a>
 
-<form method="GET">
-    <input type='text' name='search-area' placeholder="Search your task" value="{{search_input}}">
-    <input class="button" type="submit" value='Search'>
-</form>
+<div class="toDoList">
+    <h1>To do list {{count}}</h1>
+    <a href="{% url 'task-create' %}">add task</a>
+    
+    <form method="GET">
+        <input type='text' name='search-area' placeholder="Search your task" value="{{search_input}}">
+        <input class="button" type="submit" value='Search'>
+    </form>
+    
+    <table>
+        <tr>
+            <th>Item</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+        {% for task in tasks %}
+        <tr>
+            <td>{{task.title}}</td>
+            <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
+            <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
+        </tr>
+        {% empty %} 
+        <h3>You have no tasks!</h3>
+        {% endfor %}
+    </table>
 
-<table>
-    <tr>
-        <th>Item</th>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
-    {% for task in tasks %}
-    <tr>
-        <td>{{task.title}}</td>
-        <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
-        <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
-    </tr>
-    {% empty %} 
-    <h3>You have no tasks!</h3>
-    {% endfor %}
-</table>
+</div>
+
 {% endblock content %}
