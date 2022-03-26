@@ -1,3 +1,1 @@
-# to-do-django-app
-
-a To Do app using django class based views
+# A to do app built using <b>Django</b> class based views
