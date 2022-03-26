@@ -12,9 +12,14 @@
 
 <hr>
 
+<div class="userTasks">
+    <div><h3>Hello {{request.user|title}}</h3>
+    <h4>You have <i>{{count}}</i> incomplete task{{ count|pluralize:"s" }}</h4></div>
+</div>
+
 <div class="toDoList">
     <h1>To do list {{count}}</h1>
-    <a href="{% url 'task-create' %}">add task</a>
+    <a class="addTask" href="{% url 'task-create' %}">add task</a>
     
     <form method="GET">
         <input type='text' name='search-area' placeholder="Search your task" value="{{search_input}}">
@@ -33,6 +38,7 @@
             <td>{{task.title}}</td>
             <td><a href="{% url 'task-update' task.id %}">Edit</a></td>
             <td><a href="{% url 'task-delete' task.id %}">Delete</a></td>
+            <td><a href="{% url 'task-delete' task.id %}">View</a></td>
         </tr>
         {% empty %} 
         <h3>You have no tasks!</h3>
